@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Entrance</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f4f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #1e293b;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+    }
+    main {
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #1e293b;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    label, textarea {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+    }
+    textarea {
+      height: 100px;
+      padding: 10px;
+      resize: vertical;
+    }
+    button {
+      margin-top: 10px;
+      background-color: #1e293b;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #334155;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1e293b;
+      color: white;
+      margin-top: 40px;
+    }
+    .responses {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #dbeafe;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .risk-analysis {
+      background-color: #dbeafe;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    .confirmation {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Secure Entrance</h1>
+    <p>Mejorando la seguridad de las viviendas</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Introducción</h2>
+      <p>
+        El proyecto se enfoca en mejorar la seguridad de las viviendas, abordando riesgos delictivos como la falta de métodos de seguridad efectivos y factores de oportunidad.
+      </p>
+      <p>
+        El sistema de seguridad se compone de tres elementos integrados:
+      </p>
+
+      <div style="background-color: #dbeafe; padding: 15px; margin-bottom: 15px; border-radius: 8px;">
+        <strong>Cámara:</strong> Esta cumplirá dos funciones: reconocimiento facial para otorgar acceso a la vivienda, además de grabar todo lo que pasa al frente de tu casa.
+      </div>
+
+      <div style="background-color: #dbeafe; padding: 15px; margin-bottom: 15px; border-radius: 8px;">
+        <strong>Lector de huellas digitales:</strong> En este se registrarán las huellas digitales de los residentes para poder otorgar acceso a la vivienda.
+      </div>
+
+      <div style="background-color: #dbeafe; padding: 15px; border-radius: 8px;">
+        <strong>Aplicación:</strong> Por medio de esta se podrá ver la cámara y también otorgar acceso de manera remota si se tiene un invitado.
+      </div>
+    </section>
+
+    <section>
+      <h2>Justificación</h2>
+      <p>
+        En las ciudades de Colombia, especialmente en Bogotá D.C., se registra un alto índice de inseguridad, con un aumento considerable de hurtos a viviendas.
+        A través de nuestro sistema de seguridad antirrobos, buscamos ofrecer una solución efectiva para contrarrestar esta problemática social,
+        que no solo afecta el patrimonio de los hogares, sino también la tranquilidad de quienes los habitan. Nuestro sistema brinda a los usuarios
+        la posibilidad de contar con una herramienta que les ofrezca seguridad, permitiéndoles dejar sus hogares tranquilos y protegidos.
+      </p>
+    </section>
+
+    <section>
+      <h2>Desarrollo del Proyecto (Primer Semestre)</h2>
+      <ul>
+        <li>Planteamiento para la creación del proyecto.</li>
+        <li>Creación del grupo para la formalización del proyecto.</li>
+        <li>Planteamiento de la pregunta problema y su justificación.</li>
+        <li>Realización del cuestionario de análisis del proyecto.</li>
+        <li>Planteamiento de viabilidad e innovación.</li>
+        <li>Investigación de métodos y modalidades de hurtos a viviendas.</li>
+        <li>Investigación de empresas de seguridad para análisis de viabilidad del proyecto.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Integrantes del Proyecto</h2>
+      <ul>
+        <li>Jonatan Ortiz</li>
+        <li>Brayan Suarez</li>
+        <li>Breiner Hernandez</li>
+      </ul>
+      <p><strong>Descripción:</strong> Estudiantes de primer semestre de TAI (Tecnología en Automatización Industrial)</p>
+    </section>
+
+    <section>
+      <h2>Pregunta Problema</h2>
+      <p><strong>¿De qué manera un sistema antirrobos basado en control de acceso, prevención y detección de intentos de robo puede contribuir a la reducción de la inseguridad en las viviendas de nuestra ciudad, brindando mayor tranquilidad a sus residentes?</strong></p>
+      <label for="respuesta">Tu respuesta:</label>
+      <textarea id="respuesta" name="respuesta" placeholder="Escribe aquí tu respuesta..."></textarea>
+      <button type="button" onclick="submitAnswer()" aria-label="Enviar respuesta">Enviar</button>
+    </section>
+
+    <section>
+      <button type="button" onclick="toggleResponses()">Ver respuestas</button>
+      <div id="responsesSection" style="display:none;">
+        <h3>Respuestas de los usuarios:</h3>
+        <!-- Las respuestas se agregarán aquí dinámicamente -->
+      </div>
+    </section>
+
+    <!-- Análisis de Riesgo dentro de un bloque azul -->
+    <section>
+      <div class="risk-analysis">
+        <h2>Análisis de Riesgo</h2>
+        <ul>
+          <li>Proyecto no viable para su realización.</li>
+          <li>Falta de datos confiables o viables que puedan sustentar viabilidad de desarrollo del proyecto.</li>
+          <li>Falta de elementos necesarios para el proyecto.</li>
+          <li>Falta de responsabilidad y compromiso al realizar las actividades necesarias para el proyecto.</li>
+          <li>Baja estadística en la modalidad de hurto a viviendas.</li>
+          <li>Falta de financiación del proyecto.</li>
+          <li>Cambio estructural del proyecto.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Proyecto académico - Secure Entrance
+  </footer>
+
+  <script>
+    let respuestas = []; // Array para almacenar respuestas
+
+    // Función para enviar la respuesta
+    function submitAnswer() {
+      var answer = document.getElementById("respuesta").value;
+      if (answer.length < 10) {
+        alert("Por favor, escribe una respuesta más detallada.");
+        return;
+      }
+      if (answer) {
+        respuestas.push(answer); // Agrega la respuesta al array
+        alert("Gracias por tu respuesta.");
+        document.getElementById("respuesta").value = ''; // Limpiar el campo de respuesta
+        updateResponses(); // Actualiza la sección de respuestas
+
+        // Mostrar un mensaje de confirmación visual
+        var confirmationMessage = document.createElement("div");
+        confirmationMessage.classList.add("confirmation");
+        confirmationMessage.textContent = "¡Tu respuesta ha sido enviada con éxito!";
+        document.body.appendChild(confirmationMessage);
+        setTimeout(function() {
+          confirmationMessage.remove();
+        }, 3000); // El mensaje desaparece después de 3 segundos
+      } else {
+        alert("Por favor, escribe una respuesta antes de enviar.");
+      }
+    }
+
+    // Función para actualizar la sección de respuestas
+    function updateResponses() {
+      var responsesSection = document.getElementById("responsesSection");
+      responsesSection.innerHTML = "<h3>Respuestas de los usuarios:</h3>"; // Reinicia la sección
+
+      // Agrega cada respuesta al bloque de respuestas
+      respuestas.forEach((respuesta, index) => {
+        var divRespuesta = document.createElement("div");
+        divRespuesta.classList.add("responses");
+        divRespuesta.textContent = `Usuario ${index + 1}: ${respuesta}`;
+        responsesSection.appendChild(divRespuesta);
+      });
+    }
+
+    // Función para mostrar u ocultar las respuestas
+    function toggleResponses() {
+      var responsesSection = document.getElementById("responsesSection");
+      responsesSection.style.display = (responsesSection.style.display === "none" || responsesSection.style.display === "") ? "block" : "none";
+    }
+  </script>
+</body>
+</html>
